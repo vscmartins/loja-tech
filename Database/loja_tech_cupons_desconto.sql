@@ -1,0 +1,55 @@
+-- MySQL dump 10.13  Distrib 8.0.46, for Win64 (x86_64)
+--
+-- Host: localhost    Database: loja_tech
+-- ------------------------------------------------------
+-- Server version	8.0.46
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `cupons_desconto`
+--
+
+DROP TABLE IF EXISTS `cupons_desconto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cupons_desconto` (
+  `id_cupom` int NOT NULL AUTO_INCREMENT,
+  `codigo` varchar(10) NOT NULL,
+  `percentual` decimal(5,2) NOT NULL,
+  `usado` tinyint(1) DEFAULT '0',
+  `criado_em` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_cupom`),
+  UNIQUE KEY `codigo` (`codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cupons_desconto`
+--
+
+LOCK TABLES `cupons_desconto` WRITE;
+/*!40000 ALTER TABLE `cupons_desconto` DISABLE KEYS */;
+INSERT INTO `cupons_desconto` VALUES (1,'EC097B1A',20.00,0,'2026-11-24 18:13:33'),(2,'9BF49CE8',20.00,0,'2026-11-24 18:13:33'),(3,'0E13D8BA',20.00,0,'2026-11-24 18:13:33'),(4,'A8644774',20.00,0,'2026-11-24 18:13:33'),(5,'A9C90F8E',20.00,0,'2026-11-24 18:13:33'),(6,'85E7039C',20.00,0,'2026-11-24 18:13:33'),(7,'783D4A9C',20.00,0,'2026-11-24 18:13:33'),(8,'FE863E1D',20.00,0,'2026-11-24 18:13:33'),(9,'BB1B4099',20.00,0,'2026-11-24 18:13:33'),(10,'D0C91723',20.00,0,'2026-11-24 18:13:33');
+/*!40000 ALTER TABLE `cupons_desconto` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2026-11-24 18:31:45
